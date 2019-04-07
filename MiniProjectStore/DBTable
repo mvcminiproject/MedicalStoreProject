@@ -1,0 +1,37 @@
+#Create table
+
+SQL> DESC MEDICALSTORE;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ MID                                                NUMBER(10)
+ MNAME                                              VARCHAR2(20)
+ FORMULA                                            VARCHAR2(20)
+ MFGDATE                                            DATE
+ EXPDATE                                            DATE
+ PRICE                                              NUMBER(10,2)
+ COUNTRY                                            VARCHAR2(10));
+ 
+ #check table is created correctly by inserting manually
+ 
+ SQL> insert into medicalstore values(1,'COLDDOT','C0D2T','12-OCT-10','12-AUG-19',5,'INDIA');
+ 
+ #Create Sequence
+ 
+ SQL>CREATE SEQUENCE MED_SEQ START BY 2 INCREMENT BY 1;
+ 
+ #CHECK SEQUENCE IS WORKING OR NOT
+ 
+ SQL> insert into medicalstore values(MED_SEQ.NEXTVAL,'PARASITMAL','P3ST6','13-JUN-2012','15-JUL-2020',2,'NEPAL');
+ 
+ 
+SQL> SELECT * FROM MEDICALSTORE;
+
+       MID MNAME                FORMULA              MFGDATE   EXPDATE
+---------- -------------------- -------------------- --------- ---------
+     PRICE COUNTRY
+---------- ----------
+         1 COLDDOT              C0D2T                12-OCT-10 12-AUG-19
+         5 INDIA
+
+         2 PARASITMAL           P3ST6                13-JUN-12 15-JUL-20
+         2 NEPAL
