@@ -7,12 +7,27 @@
 	<property name="mappings">
 	<props>
 	<prop key="/welcome.htm">pvc</prop>
+	<prop key="/login.htm">lc</prop>
+	<prop key="/result.htm">lc</prop>
+	<prop key="/list_meds.htm">smc</prop>
 	</props>
 	</property>
 	</bean>
 	
 	<bean id="pvc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
 	<property name="viewName" value="home"></property>
+	</bean>
+	
+	<bean id="lc" class="com.isr.controller.LoginController">
+	<constructor-arg ref="service"></constructor-arg>
+		<property name="commandName" value="lgCmd" />
+		<property name="commandClass" value="com.isr.command.LoginCommand" />
+		<property name="formView" value="login" />
+		<property name="sessionForm" value="true" />
+	</bean>
+	
+	<bean id="smc" class="com.isr.controller.SelectMedicalController">
+	<constructor-arg ref="service"></constructor-arg>
 	</bean>
 	
 	

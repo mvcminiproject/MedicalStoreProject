@@ -74,7 +74,7 @@
 						</div>
 						<div class="5u">
 							<ul>
-								<li><a href="#" class="button big icon fa-arrow-circle-right">Medical Store</a></li>
+								<li><a href="login.htm" class="button big icon fa-arrow-circle-right">Medical Store</a></li>
 								<li><a href="#" class="button alt big icon fa-question-circle">More info</a></li>
 							</ul>
 						</div>
