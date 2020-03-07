@@ -13,5 +13,7 @@ public class MedicalBO {
 	private Date expDate;
 	private Float price;
 	private String country;
+	
+	
 
 }

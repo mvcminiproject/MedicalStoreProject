@@ -13,7 +13,7 @@ import org.springframework.jdbc.core.ResultSetExtractor;
 
 import com.isr.bo.LoginBO;
 import com.isr.bo.MedicalBO;
-
+ 
 
 public class MedicalDAOImpl implements MedicalDAO {
 	private final String SELECT_QUERY="SELECT MID,MNAME,FORMULA,MFGDATE,EXPDATE,PRICE,COUNTRY FROM MEDICALSTORE";

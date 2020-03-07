@@ -79,5 +79,11 @@ public class MedicalServiceImpl implements MedicalService {
 			return "Valid credentials";
 	}
 
+	@Override
+	public String toString() {
+		return "MedicalServiceImpl [dao=" + dao + "]";
+	}
+	
+
 
 }
